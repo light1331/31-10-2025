@@ -218,14 +218,19 @@ gsap.from(".page3Head>small", {
   }
 });
 
-gsap.to(".page3 .slider h1", {
-  transform: 'translateX(-80.5%)',
+const slider = document.querySelector(".page3 .slider h1");
+const textWidth = slider.offsetWidth;
+const viewportWidth = window.innerWidth;
+const distance = textWidth - viewportWidth; // total pixels the text should move
+
+gsap.to(slider, {
+  x: -distance,           // move left by the exact distance
+  ease: "none",
   scrollTrigger: {
     trigger: ".page3",
-    scroller: "body",
-    start: 'top 0%',
-    end: 'top -100%',
-    scrub: 2,
+    start: "top top",
+    end: () => `+=${distance}`, // scroll distance matches the text width
+    scrub: 1,
     pin: true,
   }
 }); /*Code For The Scroll Slider*/
