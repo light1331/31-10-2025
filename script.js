@@ -218,7 +218,26 @@ gsap.from(".page3Head>small", {
   }
 });
 
-const slider = document.querySelector(".page3 .slider h1");
+window.addEventListener("load", () => {
+  const slider = document.querySelector(".page3 .slider h1");
+  const textWidth = slider.offsetWidth;
+  const viewportWidth = window.innerWidth;
+  const distance = textWidth - viewportWidth;
+
+  gsap.to(slider, {
+    x: -distance,
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".page3",
+      start: "top top",
+      end: () => `+=${distance}`,
+      scrub: 1,
+      pin: true,
+    }
+  });
+});
+  
+/*const slider = document.querySelector(".page3 .slider h1");
 const textWidth = slider.offsetWidth;
 const viewportWidth = window.innerWidth;
 const distance = textWidth - viewportWidth; // total pixels the text should move
