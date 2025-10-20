@@ -408,7 +408,7 @@ body{
   font-family: lemonBold;
   width: 100%;
   white-space: nowrap;
-  padding: 0 0 0 -0.5vh;
+  padding: 0 0 0 -0.49vh;
   color: #888;
 }
 
@@ -813,6 +813,7 @@ body{
 .sorry-title>h1{
   font-family: signite;
   font-weight: 100;
+  font-size: 3.5vh;
   color: #777;
   text-transform: capitalize;
   -webkit-text-stroke: 1px #777;
@@ -951,7 +952,7 @@ body{
   
   .last-pt1>p, .last-pt2>p, .last-pt3>p, .last-pt4>p{
     font-family: poppins;
-    font-size: 1.55vh;
+    font-size: 1.45vh;
     text-transform: capitalize;
     text-align: justify;
   }
