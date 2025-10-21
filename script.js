@@ -219,7 +219,7 @@ gsap.from(".page3Head>small", {
 });
 
   gsap.to(".page3 .slider h1", {
-    xPercent: -84,
+    xPercent: -82,
   scrollTrigger: {
     trigger: ".page3",
     start: "top top",
@@ -754,7 +754,7 @@ gsap.from(".last-wish div:nth-child(2)", {
   scrollTrigger: {
     scroller: "body",
     trigger: ".last-wish div:nth-child(2)",
-    start: 'top 70%',
+    start: 'top 72%',
     end: 'top 70%',
     scrub: 1,
   }
